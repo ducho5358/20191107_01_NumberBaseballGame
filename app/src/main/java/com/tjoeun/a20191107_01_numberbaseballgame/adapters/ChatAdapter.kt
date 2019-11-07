@@ -26,6 +26,14 @@ class ChatAdapter(context: Context, res:Int, list: ArrayList<ChatData>)
         // tempRow가 null인 경우를 대비했으니, row에 tempRow는 절대 null 아니라고 하면서 대입.
         var row = tempRow!!
 
+
+        var data = mList.get(position)
+
+        var contentTxt = row.findViewById<TextView>(R.id.contentTxt)
+
+        contentTxt.text = data.message
+
+
         return row
     }
 

@@ -50,6 +50,16 @@ class MainActivity : BaseActivity() {
 
     override fun setupEvents() {
 
+        inputBtn.setOnClickListener {
+            var inputNum = inputEdt.text.toString()
+            chatList.add(ChatData(inputNum, "ME"))
+
+            chatAdapter?.notifyDataSetChanged()
+
+
+            chatListView.smoothScrollToPosition()
+        }
+
     }
 
     override fun setValues() {
