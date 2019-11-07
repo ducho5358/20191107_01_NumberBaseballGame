@@ -7,6 +7,4 @@ class ChatData(message:String, speaker:String) : Serializable {
     var message = message
     var speaker = speaker
 
-
-
 }
